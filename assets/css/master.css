@@ -3,3 +3,10 @@ input[type=number]::-webkit-outer-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 }
+.custom-side-nav{
+	margin-top: 2%;
+}
+.custom-border{
+	border: 1px solid #a6a6a6;
+	border-radius: 1%;
+}
