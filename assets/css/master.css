@@ -11,3 +11,13 @@ input[type=number]::-webkit-outer-spin-button {
 	border: 1px solid #a6a6a6;
 	border-radius: 1%;
 }
+.label-top{
+	margin-top: 2%;
+}
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
