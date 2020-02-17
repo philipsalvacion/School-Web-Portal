@@ -21,3 +21,6 @@ footer{
   width: 100%;
   text-align: center;
 }
+.no-underline{
+	text-decoration: none !important;
+}
