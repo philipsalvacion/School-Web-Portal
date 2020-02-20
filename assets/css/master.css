@@ -24,3 +24,6 @@ footer{
 .no-underline{
 	text-decoration: none !important;
 }
+.my-btn{
+	background-color: red;
+}

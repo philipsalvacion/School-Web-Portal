@@ -1,15 +1,85 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
-		<form class="register.php" action="index.html" method="post">
-			<input type="text" name="password" value="">
-			<input type="text" name="birthday" value="">
-			<input type="password" name="password" value="">
-			<input type="submit" name="register_btn" value="submit">
-		</form>
-	</body>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>Register Access</title>
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/master.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-light navbar-expand-md">
+		<div class="container-fluid"><a class="navbar-brand" href="#">Brand</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse"
+			id="navcol-1">
+			<ul class="nav navbar-nav">
+				<li class="nav-item" role="presentation"><a class="nav-link active" href="#">Bulletin</a></li>
+				<li class="nav-item" role="presentation"><a class="nav-link" href="#">Stream Components</a></li>
+				<li class="nav-item" role="presentation"><a class="nav-link" href="#">Forums</a></li>
+			</ul>
+			<!-- <div class="dropdown border-info d-flex d-xl-flex justify-content-center ml-auto justify-content-xl-start align-items-xl-center"><a class="dropdown-toggle d-xl-flex justify-content-xl-end align-items-xl-center" data-toggle="dropdown" aria-expanded="false" href="#"><i class="fa fa-user d-xl-flex ml-auto align-items-xl-center"></i></a>
+			<div class="dropdown-menu dropdown-menu-right text-left"
+			role="menu"><a class="dropdown-item" role="presentation" href="#">Notification</a><a class="dropdown-item" role="presentation" href="#">Account Settings</a><a class="dropdown-item" role="presentation" href="#">Log Out</a></div>
+		</div> -->
+	</div>
+</div>
+</nav>
+<div style="width: 100%;">
+	<div class="container" style="margin-left: 3%;margin-right: 3%;margin-top: 3%;">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="clearfix"></div>
+				<div><i class="fa fa-gear"></i><span class="text-black-50" style="font-size: 16px;margin-left: 4px;">Site Navigation</span>
+					<hr>
+					<a class="no-underline" href="loginMenu.html">
+						<p class="lead">Log in</p>
+					</a>
+					<a class="no-underline" href="#">
+						<p class="lead">Register for Access</p>
+					</a>
+				</div>
+				<div style="margin-top: 20%;"><i class="fa fa-info-circle"></i><span class="text-black-50" style="font-size: 16px;margin-left: 4px;">Learn More</span>
+					<hr>
+				</div>
+				<p class="lead">Contact Us</p>
+				<p class="lead">About Us</p>
+			</div>
+			<div class="col-md-8">
+				<div class="d-flex justify-content-center">
+
+					<form action="index.html" method="post" style="width: 60%; border: 1px solid #8c8c8c; padding: 3%; border-radius: 5px;">
+						<center>
+							<h4>Register Account</h4>
+						</center>
+						<hr>
+						<div class="form-group">
+							<label for="">ID number:</label>
+							<input class="form-control" type="number" name="" value="" placeholder="Enter your ID number" style="text-align: center">
+						</div>
+						<hr>
+
+						<label for="">Personal Information</label>
+						<input class="form-control" type="text" name="" value="" placeholder="First Name" style="text-align: center; margin-bottom: 3%">
+						<input class="form-control" type="text" name="" value="" placeholder="Last Name" style="text-align: center; margin-bottom: 3%">
+						<input class="form-control" type="text" name="" value="" placeholder="Birthday" style="text-align: center; margin-bottom: 1%">
+						<label for="" style="font-size: 70%; color: #8c8c8c">*The information above must match the data of the office of the registrar*</label>
+						<!-- <hr> -->
+						<input class="form-control btn btn-primary" type="button" name="" value="Student Register" style="width: 100%">
+						<span>
+							<hr>
+						</span>
+						<input class="form-control btn btn-warning" type="button" name="" value="Faculty Register" style="width: 100%"><br>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
 </html>
