@@ -58,17 +58,20 @@
 						<hr>
 						<div class="form-group">
 							<label for="">ID number:</label>
-							<input class="form-control" type="number" name="" value="" placeholder="Enter your ID number" style="text-align: center">
+							<input id="id" class="form-control" type="number" name="" value="" placeholder="Enter your ID number" style="text-align: center">
 						</div>
 						<div class="form-group">
 							<label for="">Password:</label>
-							<input class="form-control" type="text" name="" value="" placeholder="Enter your Password" style="text-align: center">
+							<input id="password" class="form-control" type="text" name="" value="" placeholder="Enter your Password" style="text-align: center">
 						</div>
-						<input class="form-control btn btn-primary" type="button" name="" value="Student Login" style="width: 100%">
+						<input class="form-control btn btn-primary" type="button" name="" value="Student Login" style="width: 100%" onclick="studentLogin()">
 						<span>
 							<hr>
 						</span>
-						<input class="form-control btn btn-warning" type="button" name="" value="Faculty Login" style="width: 100%"><br>
+						<input class="form-control btn btn-warning" type="button" name="" value="Faculty Login" style="width: 100%" onclick="facultyLogin()"><br>
+						<div id="status" style="text-align: center; color: red">
+
+						</div>
 						<a href="#" style="font-size: 80%">Forgot Password?</a>
 					</form>
 				</div>
@@ -78,6 +81,7 @@
 </div>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets\js\login.js" charset="utf-8"></script>
 </body>
 
 </html>
