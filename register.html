@@ -13,20 +13,21 @@
 
 <body>
 	<nav class="navbar navbar-light navbar-expand-md">
-		<div class="container-fluid"><a class="navbar-brand" href="#">Brand</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-			<div class="collapse navbar-collapse"
-			id="navcol-1">
-			<ul class="nav navbar-nav">
-				<li class="nav-item" role="presentation"><a class="nav-link active" href="#">Bulletin</a></li>
-				<li class="nav-item" role="presentation"><a class="nav-link" href="#">Stream Components</a></li>
-				<li class="nav-item" role="presentation"><a class="nav-link" href="#">Forums</a></li>
-			</ul>
-			<!-- <div class="dropdown border-info d-flex d-xl-flex justify-content-center ml-auto justify-content-xl-start align-items-xl-center"><a class="dropdown-toggle d-xl-flex justify-content-xl-end align-items-xl-center" data-toggle="dropdown" aria-expanded="false" href="#"><i class="fa fa-user d-xl-flex ml-auto align-items-xl-center"></i></a>
-			<div class="dropdown-menu dropdown-menu-right text-left"
-			role="menu"><a class="dropdown-item" role="presentation" href="#">Notification</a><a class="dropdown-item" role="presentation" href="#">Account Settings</a><a class="dropdown-item" role="presentation" href="#">Log Out</a></div>
-		</div> -->
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Brand</a>
+			<button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navcol-1">
+				<ul class="nav navbar-nav">
+					<li class="nav-item" role="presentation"><a class="nav-link active" href="#">Bulletin</a></li>
+					<li class="nav-item" role="presentation"><a class="nav-link" href="#">Stream Components</a></li>
+					<li class="nav-item" role="presentation"><a class="nav-link" href="#">Forums</a></li>
+				</ul>
+			</div>
+		</div>
 	</div>
-</div>
 </nav>
 <div style="width: 100%;">
 	<div class="container" style="margin-left: 3%;margin-right: 3%;margin-top: 3%;">
@@ -58,14 +59,14 @@
 						<hr>
 						<div class="form-group">
 							<label for="">ID number:</label>
-							<input class="form-control" type="number" name="" value="" placeholder="Enter your ID number" style="text-align: center">
+							<input id="id"  class="form-control" type="number" name="" value="" placeholder="Enter your ID number" style="text-align: center">
 						</div>
 						<hr>
 
 						<label for="">Personal Information</label>
-						<input class="form-control" type="text" name="" value="" placeholder="First Name" style="text-align: center; margin-bottom: 3%">
-						<input class="form-control" type="text" name="" value="" placeholder="Last Name" style="text-align: center; margin-bottom: 3%">
-						<input class="form-control" type="text" name="" value="" placeholder="Birthday" style="text-align: center; margin-bottom: 1%">
+						<input id="firstName"  class="form-control" type="text" name="" value="" placeholder="First Name" style="text-align: center; margin-bottom: 3%">
+						<input id="lastName" class="form-control" type="text" name="" value="" placeholder="Last Name" style="text-align: center; margin-bottom: 3%">
+						<input id="birthday" class="form-control" type="text" name="" value="" placeholder="Birthday" style="text-align: center; margin-bottom: 1%">
 						<label for="" style="font-size: 70%; color: #8c8c8c">*The information above must match the data of the office of the registrar*</label>
 						<!-- <hr> -->
 						<input class="form-control btn btn-primary" type="button" name="" value="Student Register" style="width: 100%">
@@ -76,13 +77,13 @@
 					</form>
 				</div>
 				<!-- <div class="panel panel-default">
-					<div class="panel-footer">
-						<footer>Copyright</footer>
-					</div>
-				</div> -->
+				<div class="panel-footer">
+				<footer>Copyright</footer>
 			</div>
-		</div>
+		</div> -->
 	</div>
+</div>
+</div>
 </div>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
