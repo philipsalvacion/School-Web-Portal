@@ -3,7 +3,7 @@ function validate(id,fname,lname,bday){
 
 	var validate_user = format.test(user);
 
-	if(user == "" || pass == ""){
+	if(id == "" || fname == "" || lname == ""){
 		alert("Please fill up the ");
 		return false;
 	}
@@ -22,7 +22,7 @@ function facultyReg(){
 	var id = $('#id').val();
 	var fName = $('#firstName').val();
 	var lName = $('#lastName').val();
-	var birthday = $('#birthday').val();
+	// var birthday = $('#birthday').val();
 
 	var validate = validate(id,fName,lName,birthday);
 
@@ -31,10 +31,26 @@ function facultyReg(){
 			id: id,
 			firstName: fName,
 			lastName: lName,
-			birthday: birthday,
+			// birthday: birthday,
 			facultyReg: "facultyReg"
 		}, function(response){
 			alert(response);
 		});
 	}
+}
+
+function facultyPasswordSetup(){
+	var password = $.('#password').val();
+	var retype = $.('#retype').val();
+
+	if(password.test(retype)){
+
+	}
+	$.post("register_faculty.php",{
+		password: password,
+		retype: retype,
+		passwordSetup: "passwordSetup"
+	},function(response){
+		alert("Success!");
+	});
 }
