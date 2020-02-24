@@ -1,7 +1,10 @@
-function validate(id,fname,lname,bday){
+function validate(id,fname,lname){
 	var format = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
 
-	var validate_user = format.test(user);
+	var validate_id = format.test(id);
+	var validate_fname = format.test(fname);
+	var validate_lname = format.test(lname);
+	// var validate_bday = format.test(bday);
 
 	if(id == "" || fname == "" || lname == ""){
 		alert("Please fill up the ");
@@ -24,9 +27,9 @@ function facultyReg(){
 	var lName = $('#lastName').val();
 	// var birthday = $('#birthday').val();
 
-	var validate = validate(id,fName,lName,birthday);
+	var validate = validate(id,fName,lName);
 
-	if (validate) {
+	if (validate_id && validate_fname && validate_lname) {
 		$.post("register_faculty.php",{
 			id: id,
 			firstName: fName,
