@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>Student-Home</title>
+	<!-- Bootstrap 4 CSS -->
+	<link rel="stylesheet" href="assets\bootstrap\css\bootstrap.min.css">
+	<link rel="stylesheet" href="assets\css\master.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-light navbar-light">
+		<a class="navbar-brand" href="#">
+			<img src="bird.jpg" alt="Logo Here" style="width:40px;">
+		</a>
+		<ul class="nav navbar-nav ml-auto">
+			<li class="nav-item">
+				<label for="">February 24, 2020</label>
+			</li>
+		</ul>
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<!-- FIRST COLUMN -->
+			<div class="col-md-4 padding-2">
+				<div class="side-panel border padding-3">
+					<div class="side-nav">
+						<h4>Salvacion, John Philip B.</h4>
+						<h6>Grade 7-Samuel</h6>
+						<span><hr></span>
+						<ul class="nav flex-column">
+							<li class="nav-item">
+								<a class="nav-link" href="#">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Report Card</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">School Notices</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Account Settings</a>
+							</li>
+							<span><hr></span>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Log Out</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- SECOND COLUMN -->
+			<div class="col-md-8 padding-2">
+				<div class="main-panel border padding-2">
+					<div class="d-flex justify-content-between">
+						<div class="">
+							<h3>Welcome!</h3>
+						</div>
+						<div class="">
+							<h3>Grade 7 - Samuel</h3>
+						</div>
+					</div>
+					<hr>
+					<!-------------------- ARTICLES ---------------------->
+					<div class="news">
+						<h5>What's New?</h5>
+						<label for="" class="font-size-80" style="color: #898989;">(Month of February 2020)</label>
+						<label>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia ut libero a lobortis. Mauris magna quam, tempus ut vulputate ut, lobortis non sapien.</label>
+						<div class="articles d-flex ">
+							<div class="card article-card" style="width:300px">
+								<img class="card-img-top" src="assets\img\IMG_20191015_122340.jpg" alt="Card image">
+								<div class="card-body">
+									<h5 class="card-title">Article 1</h5>
+									<button class="btn btn-primary" data-toggle="collapse" data-target="#article1">Read article</button>
+
+									<div id="article1" class="collapse font-size-80">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia ut libero a lobortis. Mauris magna quam, tempus ut vulputate ut, lobortis non sapien.
+										<a href="#">
+											>>See full article
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="card article-card" style="width:300px">
+								<img class="card-img-top" src="assets\img\IMG_20191015_122340.jpg" alt="Card image">
+								<div class="card-body">
+									<h5 class="card-title">Article 2</h5>
+									<button class="btn btn-primary" data-toggle="collapse" data-target="#article2">Read article</button>
+
+									<div id="article2" class="collapse font-size-80">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia ut libero a lobortis. Mauris magna quam, tempus ut vulputate ut, lobortis non sapien.
+										<a href="#">
+											>>See full article
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="card article-card" style="width:300px">
+								<img class="card-img-top" src="assets\img\IMG_20191015_122340.jpg" alt="Card image">
+								<div class="card-body">
+									<h5 class="card-title">Article 3</h5>
+									<button class="btn btn-primary" data-toggle="collapse" data-target="#article3">Read article</button>
+
+									<div id="article3" class="collapse font-size-80">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia ut libero a lobortis. Mauris magna quam, tempus ut vulputate ut, lobortis non sapien.
+										<a href="#">
+											>>See full article
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--------------- END OF ARTICLES ------------------>
+					<hr>
+					<!------------- PENDING ASSIGNMENTS  --------------->
+					<div class="assignments">
+						<span>
+							<h5>Assignments Reminder</h5>
+						</span>
+						<!-- ASSIGNMENT DISLPLAY TABLE -->
+						<table class="table">
+							<thead class="thead-dark">
+								<tr>
+									<th>Subject</th>
+									<th>Title</th>
+									<th>Date of Submission</th>
+									<th>Remarks</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Math</td>
+									<td>Physics in Everyday Life</td>
+									<td>February 28, 2020</td>
+									<td>None</td>
+								</tr>
+								<tr>
+									<td>English</td>
+									<td>Subject Verb Agreement</td>
+									<td>March 05, 2020</td>
+									<td>None</td>
+								</tr>
+								<tr>
+									<td>Science</td>
+									<td>Ionic Bonding - Chemistry</td>
+									<td>February 26, 2020</td>
+									<td>None</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <div id="footer">
+	<div class="container">
+	<center>Copyright</center>
+</div>
+</div> -->
+</body>
+<!-- Bootstrap 4 JS -->
+<script src="assets\bootstrap\js\jquery.min.js" charset="utf-8"></script>
+<script src="assets\bootstrap\js\bootstrap.min.js" charset="utf-8"></script>
+</html>

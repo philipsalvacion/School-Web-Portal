@@ -4,8 +4,8 @@ input[type=number]::-webkit-outer-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 }
-#footer {
-	bottom: 0;
+/* #footer {
+	bottom: 0%;
 	width: 100%;
 	position: absolute;
 	height: 8%;
@@ -16,7 +16,7 @@ input[type=number]::-webkit-outer-spin-button {
 		text-align: center;
 	}
 
-}
+} */
 .custom-side-nav{
 	margin-top: 2%;
 }
@@ -52,4 +52,10 @@ footer{
 }
 .padding-3{
 	padding: 3% !important;
+}
+.article-card{
+	margin: .5%;
+}
+.font-size-80{
+	font-size: 80%;
 }
