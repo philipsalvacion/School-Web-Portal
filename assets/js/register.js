@@ -1,6 +1,5 @@
 function validate(id,fname,lname){
 	var format = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
-
 	var validate_id = format.test(id);
 	var validate_fname = format.test(fname);
 	var validate_lname = format.test(lname);
