@@ -1,3 +1,6 @@
+// *All commented code are not deleted for future tweaks/revision of system
+// *The unused validate() function are already written for future use (Security)
+
 function validate(id,fname,lname){
 	var format = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
 	var validate_id = format.test(id);
@@ -20,6 +23,7 @@ function validate(id,fname,lname){
 	}
 }
 
+// ================ FACULTY ================= //
 function facultyReg(){
 	var id = $('#id').val();
 	var fName = $('#firstName').val();
@@ -39,6 +43,45 @@ function facultyReg(){
 			alert(response);
 		});
 	}
+}
+
+function facultyPasswordSetup(){
+	var password = $.('#password').val();
+	var retype = $.('#retype').val();
+
+	if(password.test(retype)){
+
+	}
+	$.post("register_faculty.php",{
+		password: password,
+		retype: retype,
+		passwordSetup: "passwordSetup"
+	},function(response){
+		alert("Success!");
+	});
+}
+
+// ================ STUDENT ================= //
+function studentReg(){
+	var id = $('#id').val();
+	var fName = $('#firstName').val();
+	var lName = $('#lastName').val();
+
+	// var birthday = $('#birthday').val();
+	// var validate = validate(id,fName,lName)
+	// if (validate_id && validate_fname && validate_lname) {
+	//
+	// }
+
+	$.post("register_student.php",{
+		id: id,
+		firstName: fName,
+		lastName: lName,
+		// birthday: birthday,
+		register_btn: "register"
+	}, function(response){
+		alert(response);
+	});
 }
 
 function facultyPasswordSetup(){
