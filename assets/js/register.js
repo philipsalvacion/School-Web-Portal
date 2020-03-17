@@ -46,8 +46,8 @@ function facultyReg(){
 }
 
 function facultyPasswordSetup(){
-	var password = $.('#password').val();
-	var retype = $.('#retype').val();
+	var password = $('#password').val();
+	var retype = $('#retype').val();
 
 	if(password.test(retype)){
 
@@ -75,27 +75,47 @@ function studentReg(){
 
 	$.post("register_student.php",{
 		id: id,
-		firstName: fName,
-		lastName: lName,
+		firstname: fName,
+		lastname: lName,
 		// birthday: birthday,
 		register_btn: "register"
 	}, function(response){
-		alert(response);
+		if (response == "true") {
+			// Redirect to Password setup
+			window.location.replace("studentPasswordSetup.html");
+		}
+		else {
+			alert(response);
+		}
 	});
 }
 
-function facultyPasswordSetup(){
-	var password = $.('#password').val();
-	var retype = $.('#retype').val();
+function studentPasswordSetup(){
+	var password = $('#password').val();
+	var retype = $('#retypePassword').val();
+	var format = /[ ()_+\-=\[\]{};':"\\|,.<>\/?]/;
+	var validate_format = format.test(password);
 
-	if(password.test(retype)){
-
+	if (validate_format) {
+		alert("Invalid format");
 	}
-	$.post("register_faculty.php",{
-		password: password,
-		retype: retype,
-		passwordSetup: "passwordSetup"
-	},function(response){
-		alert("Success!");
-	});
+	else {
+		if(password == retype){
+			$.post("register_student.php",{
+				password: password,
+				passwordSetup: "passwordSetup"
+			},function(response){
+				if (response == "true") {
+					alert("Account setup successful");
+				} else {
+					alert(response);
+				}
+			});
+		}
+		else {
+			alert("Password: " + password);
+			alert("Retype: " + retype);
+			alert("Password don't match");
+		}
+	}
 }
