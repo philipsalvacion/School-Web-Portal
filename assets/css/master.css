@@ -44,6 +44,7 @@ footer{
 	border: 1px solid #898989;
 	border-radius: 5px;
 }
+
 /* Margins */
 .margin-2{
 	margin: 2% !important;
@@ -57,6 +58,7 @@ footer{
 .article-card{
 	margin: .5%;
 }
+
 /* Font sizes */
 .font-size-80{
 	font-size: 80%;

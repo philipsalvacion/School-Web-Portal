@@ -21,15 +21,6 @@ function facultyLogin(){
 	}
 }
 
-function logout(){
-	$.post("login.php",{
-		logout: "logout"
-	},function(response){
-		location.href = "loginMenu.html";
-	});
-}
-
-
 // ================= STUDENT ====================
 function studentLogin(){
 	var id = $("#id").val();
@@ -41,7 +32,7 @@ function studentLogin(){
 			studentLogin: "studentLogin"
 		},function(response){
 			if(response == 'true'){
-				location.href = "index.html";
+				window.location.replace("student_home.html");
 			}
 			else{
 				$("#status").html(response);

@@ -18,6 +18,7 @@ if(isset($_POST['facultyLogin'])){
 	}
 }
 
+// ======== LOGOUT ==========
 if(isset($_POST['logout'])){
 	unset($_SESSION['id']);
 }
@@ -27,18 +28,12 @@ if(isset($_POST['studentLogin'])){
 	$id = $_POST['id'];
 	$password = $_POST['password'];
 
-	$sql = "SELECT * FROM student_acc WHERE student_id = $id AND password = '$password'";
+	$sql = "SELECT * FROM student_acc WHERE student_id = $id AND password = sha1('$password')";
 	$result = mysqli_query($conn, $sql);
 	// echo $password;
 	$acc = mysqli_num_rows($result);
 	if ($acc > 0) {
 		$_SESSION['id'] = $id;
-		// $onlineQuery = "SELECT * FROM online_counter";
-		// $result = mysqli_query($conn, $onlineDB);
-		// $rows = mysqli_fetch_array($result);
-		// $online = $rows['online'] + 1;
-		// $onlineQuery = "UPDATE `online_counter` SET `online`= '$online' WHERE index_id = 1";
-		// mysqli_query($conn, $onlineQuery);
 		echo "true";
 	}
 	else{
