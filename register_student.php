@@ -22,7 +22,7 @@ if (isset($_POST['passwordSetup'])) {
 	$password = $_POST['password'];
 
 	$sql = "INSERT INTO student_acc (student_id, password)
-					VALUES ('$student_id', '$password')";
+					VALUES ('$student_id', sha1('$password'))";
 	$conn->query($sql);
 	echo "true";
 }

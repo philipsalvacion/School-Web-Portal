@@ -93,7 +93,7 @@ function studentReg(){
 function studentPasswordSetup(){
 	var password = $('#password').val();
 	var retype = $('#retypePassword').val();
-	var format = /[ ()_+\-=\[\]{};':"\\|,.<>\/?]/;
+	var format = /[ ()\-=\[\]{};':"\\|,.<>\/?]/;
 	var validate_format = format.test(password);
 
 	if (validate_format) {
@@ -113,8 +113,6 @@ function studentPasswordSetup(){
 			});
 		}
 		else {
-			alert("Password: " + password);
-			alert("Retype: " + retype);
 			alert("Password don't match");
 		}
 	}
