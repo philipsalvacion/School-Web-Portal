@@ -32,6 +32,31 @@ function date(){
 	$("#date").css('color', 'white');
 }
 
+function changePassword(){
+	var password = $("#password").val();
+	var retype = $("#retypePassword").val();
+	var format = /[ ()\-=\[\]{};':"\\|,.<>\/?]/;
+	var validate_format = format.test(password);
+
+	if (!validate_format) {
+		if (retype == password) {
+			$.post("student_data.php",{
+				password: password,
+				changePassword: "Change"
+			},function(response){
+				alert("Change password successful!");
+			});
+		}
+		else {
+			alert("Password don't match!");
+		}
+	}
+	else {
+		alert("Invalid format!");
+	}
+
+}
+
 $(document).ready(function(){
 	studentData();
 	date();

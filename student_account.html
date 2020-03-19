@@ -8,13 +8,14 @@
 	<link rel="stylesheet" href="assets\css\master.css">
 </head>
 <body>
-	<nav class="navbar navbar-expand-sm bg-light navbar-light">
+	<nav class="navbar navbar-expand-sm bg-danger navbar-dark">
 		<a class="navbar-brand" href="#">
-			<img src="bird.jpg" alt="Logo Here" style="width:40px;">
+			<img src="assets\img\Mizpah_logo.png" alt="" style="width:40px;">
+			Mizpah Web Portal
 		</a>
 		<ul class="nav navbar-nav ml-auto">
 			<li class="nav-item">
-				<label for="">February 24, 2020</label>
+				<label for="" id="date"></label>
 			</li>
 		</ul>
 	</nav>
@@ -24,8 +25,8 @@
 			<div class="col-md-4 padding-2">
 				<div class="side-panel border padding-3">
 					<div class="side-nav">
-						<h4>Salvacion, John Philip B.</h4>
-						<h6>Grade 7-Samuel</h6>
+						<h4 id="student_name"></h4>
+						<h6 id="section"></h6>
 						<span><hr></span>
 						<ul class="nav flex-column">
 							<li class="nav-item">
@@ -82,11 +83,11 @@
 								<div class="row">
 									<div class="col-sm-6">
 										<label for="">New Password:</label>
-										<input class="form-control" type="text" name="" value="" placeholder="Your New Password">
+										<input id="password" class="form-control" type="password" name="" value="" placeholder="Your New Password">
 									</div>
 									<div class="col-sm-6">
 										<label for="">Re-type New Password:</label>
-										<input class="form-control" type="text" name="" value="" placeholder="Re-type Password">
+										<input id="retypePassword" class="form-control" type="password" name="" value="" placeholder="Re-type Password">
 									</div>
 								</div>
 							</form>
@@ -94,7 +95,7 @@
 						</div>
 						<div class="card-footer">
 							<div class="d-flex flex-row-reverse">
-								<button class="btn btn-primary" type="button" name="button">Submit changes</button>
+								<button class="btn btn-primary" type="button" name="button" onclick="changePassword()">Submit changes</button>
 							</div>
 						</div>
 					</div>
