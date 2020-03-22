@@ -77,3 +77,8 @@ footer{
 .gray-text{
 	color: #898989;
 }
+
+/* Text alignement */
+.center-text{
+	text-align: center !important;
+}
