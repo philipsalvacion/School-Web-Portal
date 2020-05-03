@@ -1,7 +1,7 @@
-function changeCategory(category){
+function changeCategory(categories){
 	var search = $("#searchBar").val();
-	var category = $("#category_btn").html(category);
-	searchData(search,category);
+	$("#category_btn").html(categories);
+	searchData(search,$("#category_btn").html(categories));
 }
 function searchTextbook(){
 	var search = $("#searchBar").val();
@@ -9,7 +9,7 @@ function searchTextbook(){
 	searchData(search,category);
 }
 function searchData(search, category){
-	if (search.length()>0) {
+	if (search.length > 0) {
 		$.post("textbook_data.php",{
 			search: search,
 			category: category,
