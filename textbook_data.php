@@ -23,8 +23,6 @@ if (isset($_POST['IsSearchBarEmpty'])) {
 	}
 }
 else {
-	$search = $_POST['search'];
-	$category = $_POST['category'];
 	$sql = "SELECT * FROM textbooks";
 	$resultSet = mysqli_query($conn, $sql);
 

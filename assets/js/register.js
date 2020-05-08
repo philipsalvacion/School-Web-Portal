@@ -107,6 +107,7 @@ function studentPasswordSetup(){
 			},function(response){
 				if (response == "true") {
 					alert("Account setup successful");
+					
 					window.location.replace("student_home.html");
 				} else {
 					alert(response);

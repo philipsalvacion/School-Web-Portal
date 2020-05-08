@@ -11,6 +11,7 @@ if (isset($_POST["register_btn"])){
 
 	if($result->num_rows > 0){
 		$_SESSION['$student_id'] = $student_id;
+		$_SESSION['id'] = $student_id;
 		echo "true";
 	}else {
 		echo "Credentials not found on registrar's database";
