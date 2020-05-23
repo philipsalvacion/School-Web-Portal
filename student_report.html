@@ -18,6 +18,7 @@
 				<label for="" id="date"></label>
 			</li>
 		</ul>
+
 	</nav>
 	<div class="container-fluid">
 		<div class="row">
@@ -25,8 +26,8 @@
 			<div class="col-md-4 padding-2">
 				<div class="side-panel border padding-3">
 					<div class="side-nav">
-						<h4>Salvacion, John Philip B.</h4>
-						<h6>Grade 7-Samuel</h6>
+						<h4 id="student_name"></h4>
+						<h6 id="section"></h6>
 						<span><hr></span>
 						<ul class="nav flex-column">
 							<li class="nav-item">
@@ -58,168 +59,61 @@
 			<!-- SECOND COLUMN -->
 			<div class="col-md-8 padding-2">
 				<div class="main-panel border padding-2">
-					<div class="controls">
-						<h5>Your Grade Reports</h5>
-					</div>
-					<hr>
-					<div class="main-table">
-						<!-- ========= ACCORDION ========== -->
-						<div id="accordion">
-
-							<div class="card">
-								<div class="card-header">
+					<div class="card">
+						<div class="card-header">
+							<h5>Grade Report</h5>
+						</div>
+						<div class="card-body">
+							<div class="d-flex justify-content-start">
+								<form class="form" action="index.html" method="post">
+									<input id="searchBar" class="form-control" type="text" name="" value="" placeholder="Search School Year" style="margin-bottom: 3%; width: 120%;" title="Ex: 2019-2020">
+								</form>
+								<div class="container-fluid">
 									<div class="d-flex justify-content-between">
-										<a class="card-link" data-toggle="collapse" href="#collapseOne" title="Click to expand">
-											First Quarter
-										</a>
-										S.Y 2019-2020
-									</div>
-								</div>
-								<div id="collapseOne" class="collapse" data-parent="#accordion">
-									<div class="card-body">
-										<!-- TABLE -->
-										<table class="table">
-											<thead class="thead-dark">
-												<tr>
-													<th>Subject</th>
-													<th>Title</th>
-													<th>Date of Submission</th>
-													<th>Remarks</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Math</td>
-													<td>Physics in Everyday Life</td>
-													<td>February 28, 2020</td>
-													<td>None</td>
-												</tr>
-												<tr>
-													<td>English</td>
-													<td>Subject Verb Agreement</td>
-													<td>March 05, 2020</td>
-													<td>None</td>
-												</tr>
-												<tr>
-													<td>Science</td>
-													<td>Ionic Bonding - Chemistry</td>
-													<td>February 26, 2020</td>
-													<td>None</td>
-												</tr>
-											</tbody>
-										</table>
+										<button class="btn btn-danger" type="button" style="margin-left: 4%; height: 90%;" name="button" onkeyup="searchSchoolYr()">Search</button>
+										<div class="dropdown" style="margin-left: 1%;">
+											Filter:
+											<button id="qtr_btn" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+												First Qtr
+											</button>
+											<div class="dropdown-menu">
+												<a class="dropdown-item" href="#" onclick="changeQtr('Second')">Second Qtr</a>
+												<a class="dropdown-item" href="#" onclick="changeQtr('Third')">Third Qtr</a>
+												<a class="dropdown-item" href="#" onclick="changeQtr('Fourth')">Fourth Qtr</a>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
+							<div class="table-responsive-sm">
+								<table class="table">
+									<thead class="thead-dark">
+										<tr>
+											<th class="center-text">Subject</th>
+											<th class="center-text">Grade</th>
+											<th class="center-text">Subject Teacher</th>
+											<th class="center-text">Remarks</th>
+										</tr>
+									</thead>
+									<tbody id="table_body">
 
-							<div class="card">
-								<div class="card-header">
-									<div class="d-flex justify-content-between">
-										<a class="card-link" data-toggle="collapse" href="#collapseTwo" title="Click to expand">
-											Second Quarter
-										</a>
-										S.Y 2019-2020
-									</div>
-								</div>
-
-								<div id="collapseTwo" class="collapse" data-parent="#accordion">
-									<div class="card-body">
-										<!-- TABLE -->
-										<table class="table">
-											<thead class="thead-dark">
-												<tr>
-													<th>Subject</th>
-													<th>Title</th>
-													<th>Date of Submission</th>
-													<th>Remarks</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Math</td>
-													<td>Physics in Everyday Life</td>
-													<td>February 28, 2020</td>
-													<td>None</td>
-												</tr>
-												<tr>
-													<td>English</td>
-													<td>Subject Verb Agreement</td>
-													<td>March 05, 2020</td>
-													<td>None</td>
-												</tr>
-												<tr>
-													<td>Science</td>
-													<td>Ionic Bonding - Chemistry</td>
-													<td>February 26, 2020</td>
-													<td>None</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
+									</tbody>
+								</table>
 							</div>
-
-							<div class="card">
-								<div class="card-header">
-									<div class="d-flex justify-content-between">
-										<a class="card-link" data-toggle="collapse" href="#collapseThree" title="Click to expand">
-											Third Quarter
-										</a>
-										S.Y 2019-2020
-									</div>
-								</div>
-
-								<div id="collapseThree" class="collapse" data-parent="#accordion">
-									<div class="card-body">
-										<!-- TABLE -->
-										<table class="table">
-											<thead class="thead-dark">
-												<tr>
-													<th>Subject</th>
-													<th>Title</th>
-													<th>Date of Submission</th>
-													<th>Remarks</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Math</td>
-													<td>Physics in Everyday Life</td>
-													<td>February 28, 2020</td>
-													<td>None</td>
-												</tr>
-												<tr>
-													<td>English</td>
-													<td>Subject Verb Agreement</td>
-													<td>March 05, 2020</td>
-													<td>None</td>
-												</tr>
-												<tr>
-													<td>Science</td>
-													<td>Ionic Bonding - Chemistry</td>
-													<td>February 26, 2020</td>
-													<td>None</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
-							</div>
-
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- <div id="footer">
+		<div class="container">
+		<center>Copyright</center>
 	</div>
-	<!-- <div id="footer">
-	<div class="container">
-	<center>Copyright</center>
-</div>
 </div> -->
 </body>
 <!-- Bootstrap 4 JS -->
 <script src="assets\bootstrap\js\jquery.min.js" charset="utf-8"></script>
 <script src="assets\bootstrap\js\bootstrap.min.js" charset="utf-8"></script>
 <script src="assets\js\student.js" charset="utf-8"></script>
+<script src="assets\js\student_grade.js" charset="utf-8"></script>
 </html>

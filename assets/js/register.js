@@ -28,37 +28,58 @@ function facultyReg(){
 	var id = $('#id').val();
 	var fName = $('#firstName').val();
 	var lName = $('#lastName').val();
+
 	// var birthday = $('#birthday').val();
+	// var validate = validate(id,fName,lName)
+	// if (validate_id && validate_fname && validate_lname) {
+	//
+	// }
 
-	var validate = validate(id,fName,lName);
-
-	if (validate_id && validate_fname && validate_lname) {
-		$.post("register_faculty.php",{
-			id: id,
-			firstName: fName,
-			lastName: lName,
-			// birthday: birthday,
-			facultyReg: "facultyReg"
-		}, function(response){
+	$.post("register_faculty.php",{
+		id: id,
+		firstname: fName,
+		lastname: lName,
+		// birthday: birthday,
+		register_btn: "register"
+	}, function(response){
+		if (response == "true") {
+			// Redirect to Password setup
+			window.location.replace("facultyPasswordSetup.html");
+		}
+		else {
 			alert(response);
-		});
-	}
+		}
+	});
 }
 
 function facultyPasswordSetup(){
 	var password = $('#password').val();
-	var retype = $('#retype').val();
+	var retype = $('#retypePassword').val();
+	var format = /[ ()\-=\[\]{};':"\\|,.<>\/?]/;
+	var validate_format = format.test(password);
 
-	if(password.test(retype)){
-
+	if (validate_format) {
+		alert("Invalid format");
 	}
-	$.post("register_faculty.php",{
-		password: password,
-		retype: retype,
-		passwordSetup: "passwordSetup"
-	},function(response){
-		alert("Success!");
-	});
+	else {
+		if(password == retype){
+			$.post("register_faculty.php",{
+				password: password,
+				passwordSetup: "passwordSetup"
+			},function(response){
+				if (response == "true") {
+					alert("Account setup successful");
+
+					window.location.replace("faculty_home.html");
+				} else {
+					alert(response);
+				}
+			});
+		}
+		else {
+			alert("Password don't match");
+		}
+	}
 }
 
 // ================ STUDENT ================= //
@@ -107,7 +128,7 @@ function studentPasswordSetup(){
 			},function(response){
 				if (response == "true") {
 					alert("Account setup successful");
-					
+
 					window.location.replace("student_home.html");
 				} else {
 					alert(response);

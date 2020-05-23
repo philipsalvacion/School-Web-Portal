@@ -9,7 +9,7 @@ function facultyLogin(){
 			facultyLogin: "facultyLogin"
 		},function(response){
 			if(response == 'true'){
-				location.href = "index.html";
+				window.location.replace("faculty_home.html");
 			}
 			else{
 				$("#status").html(response);

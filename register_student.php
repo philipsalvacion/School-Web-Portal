@@ -14,7 +14,7 @@ if (isset($_POST["register_btn"])){
 		$_SESSION['id'] = $student_id;
 		echo "true";
 	}else {
-		echo "Credentials not found on registrar's database";
+		echo "Credentials not found on Registrar's database";
 	}
 }
 
