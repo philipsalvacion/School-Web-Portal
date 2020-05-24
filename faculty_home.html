@@ -1,10 +1,164 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
-		<p>Got here</p>
-	</body>
+<head>
+	<meta charset="utf-8">
+	<title>Faculty-Dashboard</title>
+	<!-- Bootstrap 4 CSS -->
+	<link rel="stylesheet" href="assets\bootstrap\css\bootstrap.min.css">
+	<link rel="stylesheet" href="assets\css\master.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<a class="navbar-brand" href="#">
+			<img src="assets\img\Mizpah_logo.png" alt="" style="width:40px;">
+			Mizpah Web Portal
+		</a>
+		<ul class="nav navbar-nav ml-auto">
+			<li class="nav-item">
+				<label for="" id="date"></label>
+			</li>
+		</ul>
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<!-- FIRST COLUMN -->
+			<div class="col-md-4 padding-2">
+				<div class="side-panel border padding-3">
+					<div class="side-nav">
+						<h4 id="faculty_name"></h4>
+						<h6 id="dept"></h6>
+						<span><hr></span>
+						<ul class="nav flex-column">
+							<li class="nav-item">
+								<a class="nav-link" href="#">Dashboard</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="faculty_video.html">Upload Video Lesson</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="faculty_textbooks.html">Digital Textbooks</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="faculty_report.html">Update Report Cards</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="faculty_notice.html">My Notifications</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="faculty_account.html">Account Settings</a>
+							</li>
+							<span><hr></span>
+							<li class="nav-item">
+								<a class="nav-link" href="#" onclick="logout()">Log Out</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- SECOND COLUMN -->
+			<div class="col-md-8 padding-2">
+				<div class="main-panel border padding-2">
+					<div class="d-flex justify-content-between">
+						<div class="">
+							<h3>Dashboard</h3>
+						</div>
+						<div class="">
+							<h3 id="dept2"></h3>
+						</div>
+					</div>
+					<hr>
+					<!--=========== SCHEDULES ==============-->
+					<div class="news">
+						<h5>Daily Schedules</h5>
+						<table class="table">
+							<thead class="thead-dark">
+								<tr>
+									<th>Time</th>
+									<th>Subjects / Tasks</th>
+									<th>Class & Section</th>
+									<th>Room No.</th>
+									<th>Remarks</th>
+								</tr>
+							</thead>
+							<tbody id="table_sched">
+
+							</tbody>
+						</table>
+					</div>
+					<!-- =========== END OF SCHEDULES =========== -->
+					<hr>
+					<!--============ PENDING ASSIGNMENTS  ==========--->
+					<div class="assignments">
+						<span>
+							<h5>Quizzes/Assignments Reminder</h5>
+						</span>
+						<!-- ASSIGNMENT DISLPLAY TABLE -->
+						<table class="table">
+							<thead class="thead-dark">
+								<tr>
+									<th>Test No.</th>
+									<th>Title</th>
+									<th>Remarks</th>
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody id="table_test">
+
+							</tbody>
+						</table>
+						<!-- Create a Quiz or Test via Google Forms -->
+						<a href="https://docs.google.com/forms/d/1uq6edI83gZTzcEJ69qRRvLGtxZx7jKbXdD370OslBYE/edit" style="text-decoration: none;">
+							<button class="btn btn-primary btn-block" type="button" style="margin-bottom: 1%;">Create a Quiz / Test now</button>
+						</a>
+
+						<!-- Publish Test / Quiz on web portal -->
+						<button type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#publishTest">
+							Publish Quiz / Test on Student Portal
+						</button>
+
+						<!-- Modal for publishing Test / Quiz -->
+						<div class="modal fade" id="publishTest">
+							<div class="modal-dialog modal-md">
+								<div class="modal-content">
+
+									<!-- Modal Header -->
+									<div class="modal-header">
+										<h4 class="modal-title">Publish Test / Quiz</h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+									</div>
+
+									<!-- Modal body -->
+									<div class="modal-body">
+										<form class="form-group" action="index.html" method="post">
+											<label for="title">Exam Title:</label>
+											<input id="title" class="form-control" type="text" name="" value="">
+
+											<label for="remarks">Remarks:</label>
+											<textarea id="remarks" class="form-control" name="name" rows="2" cols="80"></textarea>
+
+											<label for="embed">Embed Code:</label>
+											<textarea id="embed" class="form-control" name="name" rows="4" cols="80"></textarea>
+										</form>
+									</div>
+
+									<!-- Modal footer -->
+									<div class="modal-footer">
+										<button type="button" class="btn btn-primary btn-block" data-dismiss="modal" onclick="publishTest()">Submit</button>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<!-- Bootstrap 4 JS -->
+<script src="assets\bootstrap\js\jquery.min.js" charset="utf-8"></script>
+<script src="assets\bootstrap\js\bootstrap.min.js" charset="utf-8"></script>
+<script src="assets\js\faculty.js" charset="utf-8"></script>
+<script src="assets\js\faculty_sched.js" charset="utf-8"></script>
+<script src="assets\js\faculty_test.js" charset="utf-8"></script>
 </html>
