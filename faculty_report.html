@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>Faculty-Report Card</title>
+	<!-- Bootstrap 4 CSS -->
+	<link rel="stylesheet" href="assets\bootstrap\css\bootstrap.min.css">
+	<link rel="stylesheet" href="assets\css\master.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<a class="navbar-brand" href="#">
+			<img src="assets\img\Mizpah_logo.png" alt="" style="width:40px;">
+			Mizpah Web Portal
+		</a>
+		<ul class="nav navbar-nav ml-auto">
+			<li class="nav-item">
+				<label for="" id="date"></label>
+			</li>
+		</ul>
+
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<!-- FIRST COLUMN -->
+			<div class="col-md-4 padding-2">
+				<div class="side-panel border padding-3">
+					<div class="side-nav">
+						<h4 id="faculty_name"></h4>
+						<h6 id="dept"></h6>
+						<span><hr></span>
+						<ul class="nav flex-column">
+							<li class="nav-item">
+								<a class="nav-link" href="faculty_home.html">Dashboard</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="faculty_video.html">Upload Video Lesson</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="faculty_textbooks.html">Digital Textbooks</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Update Report Cards</a>
+							</li>
+							<!-- <li class="nav-item">
+								<a class="nav-link" href="faculty_notice.html">My Notifications</a>
+							</li> -->
+							<li class="nav-item">
+								<a class="nav-link" href="faculty_account.html">Account Settings</a>
+							</li>
+							<span><hr></span>
+							<li class="nav-item">
+								<a class="nav-link" href="#" onclick="logout()">Log Out</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- SECOND COLUMN -->
+			<div class="col-md-8 padding-2">
+				<div class="main-panel border padding-2">
+					<div class="card">
+						<div class="card-header">
+							<h5>Update Grade Report</h5>
+						</div>
+						<div class="card-body">
+							<div class="d-flex justify-content-start">
+								<form class="form" action="index.html" method="post">
+									<input id="searchBar" class="form-control" type="text" name="" value="" placeholder="Search student data" style="margin-bottom: 3%; width: 150%;" title="" onkeyup="searchStudent()">
+								</form>
+								<div class="container-fluid" style="margin-left: 3%;">
+									<div class="d-flex justify-content-between">
+										<div class="dropdown" style="margin-left: 7%;">
+											<button id="fltr_btn" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" style="width: 110%; text-transform: capitalize"">
+												Lastname
+											</button>
+											<div class="dropdown-menu">
+												<a class="dropdown-item" href="#" onclick="changeFilter('firstname')">Firstname</a>
+												<a class="dropdown-item" href="#" onclick="changeFilter('lastname')">Lastname</a>
+												<!-- <a class="dropdown-item" href="#" onclick="changeFilter('student id')">Student ID</a> -->
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table-responsive-sm">
+								<table class="table table-bordered table-hover table-sm">
+									<thead class="thead-dark">
+										<tr>
+											<th class="center-text">Student ID</th>
+											<th class="center-text">Lastame</th>
+											<th class="center-text">Firstname</th>
+											<th class="center-text">Action</th>
+										</tr>
+									</thead>
+									<tbody id="table_body">
+
+									</tbody>
+								</table>
+							</div>
+							<!-- Modal for updating grades -->
+							<div class="modal fade" id="updateGrade" style="text-align: left;">
+								<div class="modal-dialog modal-md">
+									<div class="modal-content">
+
+										<!-- Modal Header -->
+										<div class="modal-header">
+											<h4 class="modal-title">Update Student's Grade</h4>
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+										</div>
+
+										<!-- Modal body -->
+										<div class="modal-body" id="gradeData">
+											<div class="d-flex justify-content-between">
+												<p>First Quarter</p>
+												<p>SY: 2019-2020</p>
+											</div>
+											<div class="table-responsive-sm">
+												<table class="table table-bordered table-hover table-sm">
+													<thead class="thead-dark">
+														<tr>
+															<th class="center-text">Subject</th>
+															<th class="center-text">Grade</th>
+															<th class="center-text">Remarks</th>
+															<th class="center-text">Action</th>
+														</tr>
+													</thead>
+													<tbody id="table_grade">
+
+													</tbody>
+												</table>
+											</div>
+										</div>
+
+										<!-- Modal footer -->
+										<div class="modal-footer">
+											<button type="button" class="btn btn-primary btn-block" data-dismiss="modal" onclick="">Done</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <div id="footer">
+		<div class="container">
+		<center>Copyright</center>
+	</div>
+</div> -->
+</body>
+<!-- Bootstrap 4 JS -->
+<script src="assets\bootstrap\js\jquery.min.js" charset="utf-8"></script>
+<script src="assets\bootstrap\js\bootstrap.min.js" charset="utf-8"></script>
+<script src="assets\js\faculty.js" charset="utf-8"></script>
+<script src="assets\js\faculty_grade.js" charset="utf-8"></script>
+</html>

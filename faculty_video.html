@@ -30,10 +30,10 @@
 						<span><hr></span>
 						<ul class="nav flex-column">
 							<li class="nav-item">
-								<a class="nav-link" href="#">Dashboard</a>
+								<a class="nav-link" href="faculty_home.html">Dashboard</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="faculty_video.html">Upload Video Lesson</a>
+								<a class="nav-link" href="#">Upload Video Lesson</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="faculty_textbooks.html">Digital Textbooks</a>
@@ -41,9 +41,6 @@
 							<li class="nav-item">
 								<a class="nav-link" href="faculty_report.html">Update Report Cards</a>
 							</li>
-							<!-- <li class="nav-item">
-								<a class="nav-link" href="faculty_notice.html">My Notifications</a>
-							</li> -->
 							<li class="nav-item">
 								<a class="nav-link" href="faculty_account.html">Account Settings</a>
 							</li>
@@ -67,74 +64,48 @@
 						</div>
 					</div>
 					<hr>
-					<!--=========== SCHEDULES ==============-->
+					<!--=========== Videos ==============-->
 					<div class="news">
-						<h5>Daily Schedules</h5>
+						<h5>My Uploaded / Linked Videos</h5>
 						<table class="table">
 							<thead class="thead-dark">
 								<tr>
-									<th>Time</th>
-									<th>Subjects / Tasks</th>
-									<th>Class & Section</th>
-									<th>Room No.</th>
-									<th>Remarks</th>
-								</tr>
-							</thead>
-							<tbody id="table_sched">
-
-							</tbody>
-						</table>
-					</div>
-					<!-- =========== END OF SCHEDULES =========== -->
-					<hr>
-					<!--============ PENDING ASSIGNMENTS  ==========--->
-					<div class="assignments">
-						<span>
-							<h5>Quizzes/Assignments Reminder</h5>
-						</span>
-						<!-- ASSIGNMENT DISLPLAY TABLE -->
-						<table class="table">
-							<thead class="thead-dark">
-								<tr>
-									<th>Test No.</th>
-									<th>Title</th>
-									<th>Remarks</th>
+									<th>Lesson No.</th>
+									<th>Video Title</th>
+									<th>Subject</th>
 									<th>Action</th>
 								</tr>
 							</thead>
-							<tbody id="table_test">
+							<tbody id="table_video">
 
 							</tbody>
 						</table>
-						<!-- Create a Quiz or Test via Google Forms -->
-						<a href="https://docs.google.com/forms/d/1uq6edI83gZTzcEJ69qRRvLGtxZx7jKbXdD370OslBYE/edit" style="text-decoration: none;">
-							<button class="btn btn-primary btn-block" type="button" style="margin-bottom: 1%;">Create a Quiz / Test now</button>
-						</a>
+						<hr>
 
-						<!-- Publish Test / Quiz on web portal -->
-						<button type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#publishTest">
-							Publish Quiz / Test on Student Portal
+						<!-- Modal trigger button -->
+						<button type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#publishVideo">
+							Publish / Link a Video
 						</button>
 
-						<!-- Modal for publishing Test / Quiz -->
-						<div class="modal fade" id="publishTest">
+						<!-- Modal for publishing videos -->
+						<div class="modal fade" id="publishVideo">
 							<div class="modal-dialog modal-md">
 								<div class="modal-content">
 
 									<!-- Modal Header -->
 									<div class="modal-header">
-										<h4 class="modal-title">Publish Test / Quiz</h4>
+										<h4 class="modal-title">Link Your Videos in Mizpah Portal</h4>
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
 									</div>
 
 									<!-- Modal body -->
 									<div class="modal-body">
 										<form class="form-group" action="index.html" method="post">
-											<label for="title">Exam Title:</label>
+											<label for="title">Video Title:</label>
 											<input id="title" class="form-control" type="text" name="" value="">
 
-											<label for="remarks">Remarks:</label>
-											<textarea id="remarks" class="form-control" name="name" rows="2" cols="80"></textarea>
+											<label for="subject">Subject:</label>
+											<textarea id="subject" class="form-control" name="name" rows="2" cols="80"></textarea>
 
 											<label for="embed">Embed Code:</label>
 											<textarea id="embed" class="form-control" name="name" rows="4" cols="80"></textarea>
@@ -143,9 +114,8 @@
 
 									<!-- Modal footer -->
 									<div class="modal-footer">
-										<button type="button" class="btn btn-primary btn-block" data-dismiss="modal" onclick="publishTest()">Submit</button>
+										<button type="button" class="btn btn-primary btn-block" data-dismiss="modal" onclick="publishVideo()">Submit</button>
 									</div>
-
 								</div>
 							</div>
 						</div>
@@ -159,6 +129,5 @@
 <script src="assets\bootstrap\js\jquery.min.js" charset="utf-8"></script>
 <script src="assets\bootstrap\js\bootstrap.min.js" charset="utf-8"></script>
 <script src="assets\js\faculty.js" charset="utf-8"></script>
-<script src="assets\js\faculty_sched.js" charset="utf-8"></script>
-<script src="assets\js\faculty_test.js" charset="utf-8"></script>
+<script src="assets\js\video-lesson.js" charset="utf-8"></script>
 </html>

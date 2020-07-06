@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>faculty-Account Settings</title>
+	<!-- Bootstrap 4 CSS -->
+	<link rel="stylesheet" href="assets\bootstrap\css\bootstrap.min.css">
+	<link rel="stylesheet" href="assets\css\master.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<a class="navbar-brand" href="#">
+			<img src="assets\img\Mizpah_logo.png" alt="" style="width:40px;">
+			Mizpah Web Portal
+		</a>
+		<ul class="nav navbar-nav ml-auto">
+			<li class="nav-item">
+				<label for="" id="date"></label>
+			</li>
+		</ul>
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<!-- FIRST COLUMN -->
+			<div class="col-md-4 padding-2">
+				<div class="side-panel border padding-3">
+					<div class="side-nav">
+						<h4 id="faculty_name"></h4>
+						<h6 id="dept"></h6>
+						<span><hr></span>
+						<ul class="nav flex-column">
+							<li class="nav-item">
+								<a class="nav-link" href="faculty_home.html">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="faculty_video.html">Video Lessons</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="faculty_textbooks.html">Digital Textbooks</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="faculty_report.html">Report Card</a>
+							</li>
+							<!-- <li class="nav-item">
+								<a class="nav-link" href="faculty_notice.html">School Notices</a>
+							</li> -->
+							<li class="nav-item">
+								<a class="nav-link" href="#">Account Settings</a>
+							</li>
+							<span><hr></span>
+							<li class="nav-item">
+								<a class="nav-link" href="#" onclick="logout()">Log Out</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- SECOND COLUMN -->
+			<div class="col-md-8 padding-2">
+				<div class="main-panel border padding-2">
+					<div class="card">
+						<div class="card-header">
+							<h5>Account Settings</h5>
+						</div>
+						<div class="card-body">
+							<!-- Form -->
+							<form class="form-group" action="index.html" method="post">
+								<div class="row">
+									<div class="col-sm-6">
+										<label for="">Firstname:</label>
+										<input class="form-control" type="text" name="" value="" placeholder="Your Firstname" disabled>
+									</div>
+									<div class="col-sm-6">
+										<label for="">Lastname:</label>
+										<input class="form-control" type="text" name="" value="" placeholder="Your Lastname" disabled>
+									</div>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-sm-12">
+										<label for="">Address:</label>
+										<input class="form-control" type="text" name="" value="" placeholder="Your Address" disabled>
+									</div>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-sm-6">
+										<label for="">New Password:</label>
+										<input id="password" class="form-control" type="password" name="" value="" placeholder="Your New Password">
+									</div>
+									<div class="col-sm-6">
+										<label for="">Re-type New Password:</label>
+										<input id="retypePassword" class="form-control" type="password" name="" value="" placeholder="Re-type Password">
+									</div>
+								</div>
+							</form>
+							<!-- End of Form -->
+						</div>
+						<div class="card-footer">
+							<div class="d-flex flex-row-reverse">
+								<button class="btn btn-primary" type="button" name="button" onclick="changePassword()">Submit changes</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<!-- Bootstrap 4 JS -->
+<script src="assets\bootstrap\js\jquery.min.js" charset="utf-8"></script>
+<script src="assets\bootstrap\js\bootstrap.min.js" charset="utf-8"></script>
+<script src="assets\js\faculty.js" charset="utf-8"></script>
+</html>

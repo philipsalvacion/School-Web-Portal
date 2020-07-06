@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>faculty-Digital Textbooks</title>
+	<!-- Bootstrap 4 CSS -->
+	<link rel="stylesheet" href="assets\bootstrap\css\bootstrap.min.css">
+	<link rel="stylesheet" href="assets\css\master.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<a class="navbar-brand" href="#">
+			<img src="assets\img\Mizpah_logo.png" alt="" style="width:40px;">
+			Mizpah Web Portal
+		</a>
+		<ul class="nav navbar-nav ml-auto">
+			<li class="nav-item">
+				<label for="" id="date"></label>
+			</li>
+		</ul>
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<!-- FIRST COLUMN -->
+			<div class="col-md-4 padding-2">
+				<div class="side-panel border padding-3">
+					<div class="side-nav">
+						<h4 id="faculty_name"></h4>
+						<h6 id="dept"></h6>
+						<span><hr></span>
+						<ul class="nav flex-column">
+							<li class="nav-item">
+								<a class="nav-link" href="faculty_home.html">Dashboard</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="faculty_video.html">Upload Video Lesson</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Digital Textbooks</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="faculty_report.html">Update Report Cards</a>
+							</li>
+							<!-- <li class="nav-item">
+								<a class="nav-link" href="faculty_notice.html">My Notifications</a>
+							</li> -->
+							<li class="nav-item">
+								<a class="nav-link" href="faculty_account.html">Account Settings</a>
+							</li>
+							<span><hr></span>
+							<li class="nav-item">
+								<a class="nav-link" href="#" onclick="logout()">Log Out</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- SECOND COLUMN -->
+			<div class="col-md-8 padding-2">
+				<div class="main-panel border padding-2">
+					<div class="card">
+						<div class="card-header">
+							<h5>Digital Textbooks</h5>
+						</div>
+						<div class="card-body">
+							<div class="d-flex justify-content-start">
+								<form class="form" action="index.html" method="post">
+									<input id="searchBar" class="form-control" type="text" name="" value="" placeholder="Search Textbook" style="margin-bottom: 3%; width: 100%;" onkeyup="searchTextbook()">
+								</form>
+								<div class="dropdown" style="margin-left: 1%;">
+									By:
+									<button id="category_btn" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+										Title
+									</button>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#" onclick="changeCategory('Title')">Title</a>
+										<!-- <a class="dropdown-item" href="#" onclick="changeCategory('Ref No.')">Ref No.</a> -->
+										<a class="dropdown-item" href="#" onclick="changeCategory('Author')">Author</a>
+										<a class="dropdown-item" href="#" onclick="changeCategory('Classification')">Classification</a>
+									</div>
+								</div>
+							</div>
+							<div class="table-responsive-sm">
+								<table class="table">
+									<thead class="thead-dark">
+										<tr>
+											<th class="center-text" style="width: 12%;">Ref No.</th>
+											<th class="center-text">Title</th>
+											<th class="center-text">Author</th>
+											<th class="center-text">Classification</th>
+											<th class="center-text">Action</th>
+										</tr>
+									</thead>
+									<tbody id="table_body">
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<!-- Bootstrap 4 JS -->
+<script src="assets\bootstrap\js\jquery.min.js" charset="utf-8"></script>
+<script src="assets\bootstrap\js\bootstrap.min.js" charset="utf-8"></script>
+<script src="assets\js\faculty.js" charset="utf-8"></script>
+<script src="assets\js\textbook.js" charset="utf-8"></script>
+</html>

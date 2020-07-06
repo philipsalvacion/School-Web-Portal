@@ -82,3 +82,6 @@ footer{
 	/* background-color: #dc3545 !important; */
 
 }
+body{
+	overflow-y: scroll !important;
+}
